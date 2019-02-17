@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Authors: Saif Jame and Philip Aquilina-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="483.0" prefWidth="391.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.administrator">
+
+   <MenuBar fx:id="menu">
+      <menus>
+         <Menu text="File">
+            <items>
+               <MenuItem onAction="#doLogoff" text="Logoff" />
+               <SeparatorMenuItem />
+               <MenuItem onAction="#doExit" text="Exit" />
+            </items>
+         </Menu>
+         <Menu text="Navigate">
+            <items>
+               <MenuItem onAction="#gotoAlbumList" text="GoTo My Albums" />
+            </items>
+         </Menu>
+         <Menu text="Help">
+            <items>
+               <MenuItem onAction="#doHelp" text="About" />
+            </items>
+         </Menu>
+      </menus>   
+	  </MenuBar>
+
+    <GridPane hgap="10" prefHeight="50.0" vgap="10">
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+      <children>
+           <TextField fx:id="ID" prefHeight="27.0" prefWidth="239.0" promptText="login" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+   
+           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="name" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+           <Button onAction="#creatclick" prefHeight="27.0" prefWidth="75.0" text="create" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+   
+           <Button onAction="#removeclick" text="remove" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      </children>	
+    </GridPane>
+
+
+    <ListView fx:id="list" prefHeight="315.0" prefWidth="391.0" />
+	
+	
+    <GridPane hgap="10" prefHeight="50.0" vgap="10">
+
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+        <VBox.margin>
+          <Insets right="10.0" top="10.0" />
+        </VBox.margin>
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+
+    </GridPane>
+	
+	
+	
+    <GridPane hgap="10.0" prefHeight="50.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="55.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="68.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="84.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <VBox.margin>
+            <Insets bottom="20.0" left="20.0" />
+        </VBox.margin>
+
+    </GridPane>
+	
+	
+</VBox>

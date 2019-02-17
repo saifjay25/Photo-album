@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Authors: Saif Jame and Philip Aquilina-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <Text strokeType="OUTSIDE" strokeWidth="0.0">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+
+    <Text strokeType="OUTSIDE" strokeWidth="0.0">
+        <VBox.margin>
+            <Insets left="10.0" />
+        </VBox.margin>
+    </Text>
+    <Text strokeType="OUTSIDE" strokeWidth="0.0">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="The admin can add its own pictures and albums.">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" -&gt; Click Navigate ">
+        <VBox.margin>
+            <Insets left="10.0" />
+        </VBox.margin>
+    </Text>
+
+    <Text strokeType="OUTSIDE" strokeWidth="0.0">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+</VBox>

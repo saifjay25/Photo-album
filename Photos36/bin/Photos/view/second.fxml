@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Authors: Saif Jame and Philip Aquilina-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.secondpage">
+
+   <children>
+
+   <MenuBar fx:id="menu">
+      <menus>
+         <Menu text="File">
+            <items>
+               <MenuItem onAction="#doLogoff" text="Logoff" />
+               <SeparatorMenuItem />
+               <MenuItem onAction="#doExit" text="Exit" />
+            </items>
+         </Menu>
+         <Menu text="Help">
+            <items>
+               <MenuItem onAction="#doHelp" text="About" />
+            </items>
+         </Menu>
+      </menus>   
+	  </MenuBar>
+
+
+
+
+	  
+<HBox>
+   <children>
+   
+      <TableView fx:id="tview" prefHeight="500.0" prefWidth="550.0">
+        <columns>
+          <TableColumn fx:id="colal" prefWidth="146.0" text="album">
+				<cellValueFactory><PropertyValueFactory property="albumName" /></cellValueFactory>		  
+		  </TableColumn>
+		  
+          <TableColumn fx:id="colpho" prefWidth="122.0" text="number of photos">
+				<cellValueFactory><PropertyValueFactory property="photoCount" /></cellValueFactory>		  
+		  </TableColumn>
+		  
+          <TableColumn fx:id="colfirst" prefWidth="142.0" text="first picture taken">
+				<cellValueFactory><PropertyValueFactory property="startTime" /></cellValueFactory>		  
+		  </TableColumn>
+
+	          <TableColumn fx:id="collast" prefWidth="140.0" text="last picture taken">
+				<cellValueFactory><PropertyValueFactory property="endTime" /></cellValueFactory>		  
+		  </TableColumn>
+	  
+        </columns>
+      </TableView>
+
+		
+		 
+<VBox prefWidth="350.0">
+
+    <GridPane hgap="10" prefHeight="60.0" prefWidth="350.0" vgap="10">
+        <TextField fx:id="createalbum" prefColumnCount="10" promptText="album" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+		<Button onAction="#addalclicked" text="Add New Album" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="right click to remove album" GridPane.columnIndex="2" />
+
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+        <VBox.margin>
+			<Insets right="5.0" top="5.0" />
+        </VBox.margin>
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+    </GridPane>
+	
+	<GridPane hgap="1" prefHeight="60.0" prefWidth="345.0" vgap="10">
+
+        <padding>
+				<Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+		<VBox.margin>
+			<Insets right="5.0" top="5.0" />
+        </VBox.margin>
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints minWidth="100.0" />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                  <children>
+   
+           <Button fx:id="add" onAction="#createtag" prefHeight="27.0" prefWidth="132.0" text="create tag search" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+           <Button fx:id="delete" onAction="#removetagclicked" prefHeight="27.0" prefWidth="137.0" text="remove tag search" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="create tag then click search tag" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  </children>
+    </GridPane>
+
+	
+	<GridPane hgap="1" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="127.0" prefWidth="350.0" vgap="10">
+        <padding>
+				<Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                  <children>
+           <TextField fx:id="llamo" prefColumnCount="10" promptText="name" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+           <TextField fx:id="trep" prefColumnCount="10" promptText="value" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      		
+           <Button fx:id="searchTag" onAction="#tsearchclicked" prefHeight="27.0" prefWidth="166.0" text="search tag" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  </children>
+
+    </GridPane>
+	
+      	
+    <ListView fx:id="ltag" prefHeight="216.0" prefWidth="350.0" />
+	
+    <GridPane hgap="10" minHeight="-Infinity" prefHeight="97.0" prefWidth="345.0" vgap="10">
+
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+        <columnConstraints>
+          <ColumnConstraints />
+          <ColumnConstraints />
+          <ColumnConstraints maxWidth="200.0" minWidth="74.0" prefWidth="150.0" />
+          <ColumnConstraints maxWidth="190.0" minWidth="10.0" prefWidth="160.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="19.0" minHeight="0.0" prefHeight="0.0" />
+          <RowConstraints maxHeight="19.0" minHeight="0.0" prefHeight="0.0" />
+          <RowConstraints maxHeight="19.0" minHeight="0.0" prefHeight="0.0" />
+          <RowConstraints maxHeight="19.0" minHeight="0.0" prefHeight="0.0" />
+                     <RowConstraints maxHeight="19.0" minHeight="0.0" prefHeight="0.0" />
+                     <RowConstraints maxHeight="19.0" minHeight="0.0" prefHeight="0.0" />
+                     <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="29.0" />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+        </rowConstraints>
+        <VBox.margin>
+			<Insets right="5.0" top="5.0" />
+        </VBox.margin>
+                  <children>
+   		<DatePicker fx:id="sdate" minWidth="100.0" prefHeight="27.0" prefWidth="128.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+           <DatePicker fx:id="ldate" minWidth="100.0" prefHeight="27.0" prefWidth="137.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+           <Button fx:id="searchDate" onAction="#dsearchclicked" prefHeight="27.0" prefWidth="117.0" text="search date" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  </children>
+    </GridPane>
+	
+	
+	
+    <GridPane hgap="10.0" prefHeight="75.0" prefWidth="350.0">
+        <VBox.margin>
+            <Insets bottom="5.0" left="5.0" />
+        </VBox.margin>
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
+    </GridPane>
+</VBox>
+   </children>
+</HBox>
+   </children>
+</VBox>

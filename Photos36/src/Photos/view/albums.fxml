@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Authors: Saif Jame and Philip Aquilina-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.album">
+
+   <children>
+
+   <MenuBar fx:id="first" prefHeight="37.0" prefWidth="855.0">
+      <menus>
+         <Menu text="File">
+            <items>
+               <MenuItem onAction="#doLogoff" text="Logoff" />
+               <SeparatorMenuItem />
+               <MenuItem onAction="#doExit" text="Exit" />
+            </items>
+         </Menu>
+         <Menu text="Navigate">
+            <items>
+               <MenuItem onAction="#gotoAlbumList" text="GoTo My Albums" />
+            </items>
+         </Menu>
+         <Menu text="Help">
+            <items>
+               <MenuItem onAction="#doHelp" text="About" />
+            </items>
+         </Menu>
+      </menus>   
+	  </MenuBar>
+   
+   
+
+
+   <HBox>
+   <children>
+
+			<TabPane fx:id="section" prefHeight="575.0" prefWidth="660.0">
+				<tabs>
+					<Tab text="album">
+						<content>
+							  <ScrollPane prefHeight="575.0" prefWidth="660.0">
+								<content>
+											<TilePane fx:id="layout" prefHeight="518.0" prefWidth="541.0" style="-fx-background-color: azure;" />
+								</content>
+							  </ScrollPane>
+						</content>
+					</Tab>
+					<Tab text="photo">
+						<content>
+									<Pagination fx:id="page" /> 
+						</content>
+					</Tab>
+				</tabs>
+			</TabPane>
+
+		 
+<VBox prefHeight="576.0" prefWidth="253.0">
+
+    <GridPane hgap="10" prefHeight="50.0" vgap="10">
+        <TextField fx:id="tval" prefColumnCount="10" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="tname" prefColumnCount="10" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="tag name" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+		
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="tag value" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>	
+    </GridPane>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="add or create tag" />
+     <Button fx:id="delete" onAction="#deleteclicked" prefWidth="100.0" text="Delete " />
+
+     <Button fx:id="add" onAction="#createClicked" prefHeight="27.0" prefWidth="100.0" text="Create" />
+
+    <ListView fx:id="tlist" prefHeight="388.0" prefWidth="219.0" />
+	
+	
+    <GridPane hgap="10" prefHeight="75.0" vgap="10">
+	
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+        <VBox.margin>
+          <Insets right="1.0" top="1.0" />
+        </VBox.margin>
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                  <children>
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="click navigate to go back to albums" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-double click to englarge photo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-right click to delete move or clone rhoto" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-click name of picture to rename it" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-click file to logoff" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- right click to add photo" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  </children>
+    </GridPane>
+	
+	
+	
+    <GridPane hgap="10.0" prefHeight="50.0">
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <VBox.margin>
+            <Insets bottom="20.0" left="20.0" />
+        </VBox.margin>
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+
+    </GridPane>
+</VBox>
+			  
+			  
+			</children>
+	</HBox>
+
+   </children>
+
+
+</VBox>

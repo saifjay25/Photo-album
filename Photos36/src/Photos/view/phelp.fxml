@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Authors: Saif Jame and Philip Aquilina-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <Text strokeType="OUTSIDE" strokeWidth="0.0">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="how to login in">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="put admin or username">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="admin has to put username in order to create username">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+   <Text strokeType="OUTSIDE" strokeWidth="0.0">
+      <VBox.margin>
+         <Insets left="10.0" />
+      </VBox.margin>
+   </Text>
+</VBox>
